@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sign in</title>
+
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+		<style>
+			input[type='checkbox']:checked + span svg {
+				opacity: 1;
+			}
+		</style>
+	</head>
+
+	<body class="bg-[#f8f6ff]">
+		<div
+			class="min-h-screen flex items-center justify-center p-[28px] min-h-screen bg-[#f8f6ff] bg-[url('./img/icons/line-bg.svg')] bg-no-repeat bg-bottom md:bg-right bg-[length:120%] md:bg-[length:1140px]"
+		>
+			<div class="bg-transparent max-w-[1200px] w-full flex flex-col md:flex-row justify-between">
+				<form class="w-full max-w-[334px] bg-transparent space-y-4" novalidate>
+					<h2 class="text-[#303030] text-[32px] text-center font-medium mb-[12]">Sign in</h2>
+					<p class="text-sm text-[#0f132499] mb-[28] text-center">
+						Введите email, к которому будет привязан аккаунт
+					</p>
+					<input
+						type="email"
+						placeholder="example@mail.ru"
+						required
+						class="w-full bg-white rounded-[10px] px-4 py-[10px] shadow-[0_3px_6px_0_rgba(43,33,69,0.02),0_11px_11px_0_rgba(43,33,69,0.02),0_24px_14px_0_rgba(43,33,69,0.01),0_42px_17px_0_rgba(43,33,69,0),0_66px_18px_0_rgba(43,33,69,0)] placeholder:font-normal placeholder:text-[16px] placeholder:leading-[140%] mb-[20px]"
+					/>
+
+					<label class="flex items-center gap-2 cursor-pointer select-none">
+						<input type="checkbox" class="peer sr-only" required />
+						<span class="w-6 h-6 flex items-center justify-center rounded bg-white shadow-sm">
+							<svg
+								width="15"
+								height="12"
+								viewBox="0 0 15 12"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+								class="opacity-0 transition-opacity duration-200 peer-checked:opacity-100"
+							>
+								<path
+									d="M2 6.9L5.14286 10.5L13 1.5"
+									stroke="#474351"
+									stroke-width="3"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+							</svg>
+						</span>
+						<span class="text-[12px] text-[#0f132499]">
+							Даю согласие на обработку персональных данных
+						</span>
+					</label>
+
+					<button
+						type="submit"
+						class="w-full py-2 rounded-lg bg-gradient-to-r from-purple-500 to-purple-600 text-white font-semibold hover:opacity-90 transition mt-[50px]"
+					>
+						Continue
+					</button>
+				</form>
+
+				<!-- Блок с картинкой — скрыт на мобилке -->
+				<div
+					class="relative max-w-[578px] w-full opacity-0 invisible md:opacity-100 md:visible transition-all duration-300"
+				>
+					<img src="./img/cards.png" alt="Cards" class="" />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
